@@ -58,7 +58,7 @@ namespace sferes {
       SFERES_CONST float min_p = Params::parameters::min;
       void develop() {
         for (unsigned i = 0; i < _params.size(); ++i)
-          _params[i] = this->_gen.data(i) * (max_p - min_p) + min_p;
+          _params[i] = this->_gen.data(i) * ((Params::parameters::max) - (Params::parameters::min)) + (Params::parameters::min);
       }
       float data(size_t i) const {
         assert(i < size());
